@@ -11,6 +11,8 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -42,19 +44,31 @@
 <body class="bg-gray-900 text-white">
 
   <!-- Navbar -->
-  <header class="fixed-top bg-dark bg-opacity-75 backdrop-blur z-50 shadow-sm">
-    <nav class="container d-flex justify-content-between align-items-center py-3">
-      <h1 class="fw-bold">Bounty's Portfolio</h1>
-      <ul class="nav">
-        <li class="nav-item"><a href="#3d" class="nav-link text-white">3D</a></li>
-        <li class="nav-item"><a href="#photos" class="nav-link text-white">Photos</a></li>
-        <li class="nav-item"><a href="#websites" class="nav-link text-white">Websites</a></li>
-        <li class="nav-item"><a href="#videos" class="nav-link text-white">Videos</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+<!-- Navbar -->
+<header class="fixed-top bg-dark bg-opacity-75 backdrop-blur z-50 shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark container">
+    <a class="navbar-brand fw-bold" href="#">Bounty's Portfolio</a>
+
+    <!-- Hamburger button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#3d" class="nav-link">3D</a></li>
+        <li class="nav-item"><a href="#photos" class="nav-link">Photos</a></li>
+        <li class="nav-item"><a href="#websites" class="nav-link">Websites</a></li>
+        <li class="nav-item"><a href="#videos" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Hero -->
   <section class="vh-100 d-flex align-items-center justify-content-center text-center position-relative bg-gradient-to-r from-purple-900 via-gray-900 to-black">
@@ -138,7 +152,12 @@
   <section id="about" class="py-5 bg-gray-800 text-center">
     <div class="container">
       <h2 class="mb-4 display-6 fw-bold">About Me</h2>
-      <p class="lead text-gray-300">I'm a multidisciplinary creator passionate about engineering, design, and technology. I love combining creativity with tech to bring ideas to life.</p>
+      <p class="lead text-gray-300"> I'm a multidisciplinary creator and inventor passionate about many things, wondering to make the world a better place.
+        This passion drives me to build skills across different disciplines from  Engineering, Technology, Management, to Fitness.
+      </p>
+       <p>
+        I love combining creativity with technology to bring ideas to life.
+      </p>
       <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
         <span class="badge bg-secondary">Onshape</span>
         <span class="badge bg-secondary">Sketchup</span>
