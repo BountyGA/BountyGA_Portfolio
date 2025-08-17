@@ -3,158 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Bounty's Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    iframe, video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white">
 
   <!-- Navbar -->
-  <header class="fixed w-full bg-gray-900/80 backdrop-blur z-50">
-    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-xl font-bold">Bounty's Portfolio</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#3d" class="hover:text-cyan-400">3D</a></li>
-        <li><a href="#photos" class="hover:text-cyan-400">Photos</a></li>
-        <li><a href="#websites" class="hover:text-cyan-400">Websites</a></li>
-        <li><a href="#videos" class="hover:text-cyan-400">Videos</a></li>
-        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
-        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+  <header class="fixed-top bg-dark bg-opacity-75 backdrop-blur z-50 shadow-sm">
+    <nav class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="fw-bold">Bounty's Portfolio</h1>
+      <ul class="nav">
+        <li class="nav-item"><a href="#3d" class="nav-link text-white">3D</a></li>
+        <li class="nav-item"><a href="#photos" class="nav-link text-white">Photos</a></li>
+        <li class="nav-item"><a href="#websites" class="nav-link text-white">Websites</a></li>
+        <li class="nav-item"><a href="#videos" class="nav-link text-white">Videos</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center relative bg-gradient-to-r from-purple-900 via-gray-900 to-black">
-    <h2 class="text-5xl md:text-7xl font-extrabold mb-4">Hey, I'm <span class="text-cyan-400">[Bounty G.A.]</span></h2>
-    <p class="text-xl md:text-2xl text-gray-300 mb-6">Mechatronics Engineer • 3D Designer • Web Developer</p>
-    <a href="#contact" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl text-lg font-bold transition">Hire Me</a>
+  <!-- Hero -->
+  <section class="vh-100 d-flex align-items-center justify-content-center text-center position-relative bg-gradient-to-r from-purple-900 via-gray-900 to-black">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 class="display-3 fw-bold mb-3">Hey, I'm <span class="text-cyan-400">Bounty G.A.</span></h2>
+      <p class="lead mb-4">Mechatronics Engineer • 3D Designer • Web Developer</p>
+      <a href="#contact" class="btn btn-lg btn-info fw-bold shadow">Hire Me</a>
+    </div>
   </section>
 
   <!-- 3D Designs -->
-  <section id="3d" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">3D Designs</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <model-viewer src="assets/3d/model1.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
-        <model-viewer src="assets/3d/model2.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
-        <model-viewer src="assets/3d/model3.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
+  <section id="3d" class="py-5 bg-gray-800">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 fw-bold">3D Designs</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <model-viewer src="assets/3d/model1.glb" alt="3D model" auto-rotate camera-controls class="w-100 h-100 bg-gray-700 rounded shadow"></model-viewer>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Photos -->
-  <section id="photos" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">Photography</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <img src="assets/photos/photo1.png" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
-        <img src="assets/photos/photo2.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
-        <img src="assets/photos/photo3.png" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
-         <img src="assets/photos/photo4.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
-          <img src="assets/photos/photo5.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
-           <img src="assets/photos/photo6.png" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
+  <section id="photos" class="py-5 bg-gray-900">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 fw-bold">Photos</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="assets/photos/photo1.png" class="w-100 h-100 rounded shadow object-cover">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/photos/photo2.jpg" class="w-100 h-100 rounded shadow object-cover">
+        </div>
+        <div class="col-md-4">
+          <img src="assets/photos/photo3.png" class="w-100 h-100 rounded shadow object-cover">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Websites -->
-  <section id="websites" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">Websites</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-         <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site0.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Joy_Adsite/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
+  <section id="websites" class="py-5 bg-gray-800">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 fw-bold">Websites</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card bg-dark text-white shadow h-100">
+            <img src="assets/websites/site1.png" class="card-img-top" alt="website">
+            <div class="card-body">
+              <a href="https://bountyga.github.io/Joy_Adsite/" target="_blank" class="stretched-link text-info">Visit Website</a>
+            </div>
+          </div>
         </div>
-        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site1.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Joy_Adsite/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site2.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Joy_Adsite/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site3.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Model/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
-        </div>
-         <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site4.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Model/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
-        </div>
-         <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
-          <img src="assets/websites/site5.png" alt="website" class="rounded-md mb-4">
-          <a href="https://bountyga.github.io/Model/" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
-        </div>
+        <!-- repeat more cards here -->
       </div>
     </div>
   </section>
 
   <!-- Videos -->
-  <section id="videos" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">Videos</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Local video -->
-        <video controls class="w-full rounded-xl shadow-lg">
-          <source src="assets/videos/video1.mp4" type="video/mp4">
-        </video>
-        <!-- YouTube embed -->
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe class="w-full h-full rounded-xl shadow-lg"
-            src="https://youtu.be/YOdnhyyRR-E"
-            frameborder="0" allowfullscreen></iframe>
+  <section id="videos" class="py-5 bg-gray-900">
+    <div class="container">
+      <h2 class="text-center mb-5 display-6 fw-bold">Videos</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <video controls>
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe class="w-full h-full rounded-xl shadow-lg"
-            src="https://youtu.be/0e-aAxgLDbI"
-            frameborder="0" allowfullscreen></iframe>
+        <div class="col-md-6">
+          <iframe src="https://www.youtube.com/embed/YOdnhyyRR-E" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://www.youtube.com/embed/0e-aAxgLDbI" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 bg-gray-800 text-center">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-6">About Me</h2>
-      <p class="text-lg max-w-2xl mx-auto text-gray-300">
-        I'm a multidisciplinary creator and inventor passionate about many things, wondering to make the world a better place. This passion drives me to build skills across different disciplines from  Engineering, Management, to Fitness.
-        <p>
-        I love combining creativity with technology to bring ideas to life.
-      </p>
-      </p>
-      <div class="flex justify-center mt-8 space-x-4">
-        <span class="px-4 py-2 bg-gray-700 rounded-full">Onshape</span>
-        <span class="px-4 py-2 bg-gray-700 rounded-full">Sketchup</span>
-        <span class="px-4 py-2 bg-gray-700 rounded-full">Engineering</span>
-        <span class="px-4 py-2 bg-gray-700 rounded-full">Web Dev</span>
+  <section id="about" class="py-5 bg-gray-800 text-center">
+    <div class="container">
+      <h2 class="mb-4 display-6 fw-bold">About Me</h2>
+      <p class="lead text-gray-300">I'm a multidisciplinary creator passionate about engineering, design, and technology. I love combining creativity with tech to bring ideas to life.</p>
+      <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+        <span class="badge bg-secondary">Onshape</span>
+        <span class="badge bg-secondary">Sketchup</span>
+        <span class="badge bg-secondary">Engineering</span>
+        <span class="badge bg-secondary">Web Dev</span>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
-      <p class="mb-6 text-gray-300">Let's work together! Reach me via email or socials below:</p>
-      <a href="mailto:gabrielbounty19@gmail.com" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl text-lg font-bold transition">Send Email</a>
-      <div class="flex justify-center space-x-6 mt-6">
-        <a href="http://github.com/BountyGA" class="hover:text-cyan-400">GitHub</a>
-        <a href="https://www.linkedin.com/in/bounty-gabriel-adetula-00a833181/" class="hover:text-cyan-400">LinkedIn</a>
-    
+  <section id="contact" class="py-5 bg-gray-900 text-center">
+    <div class="container">
+      <h2 class="mb-4 display-6 fw-bold">Contact Me</h2>
+      <p class="mb-3">Let's work together! Reach me via email or socials below:</p>
+      <a href="mailto:gabrielbounty19@gmail.com" class="btn btn-info btn-lg fw-bold">Send Email</a>
+      <div class="mt-4 d-flex justify-content-center gap-4">
+        <a href="http://github.com/BountyGA" class="text-white"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/bounty-gabriel-adetula-00a833181/" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-gray-800 text-center text-gray-400">
+  <footer class="py-3 bg-gray-800 text-center text-gray-400">
     © 2025 Bounty G.A. All rights reserved.
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>
