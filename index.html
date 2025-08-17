@@ -81,6 +81,14 @@
   background-color: #20b955;
 }
 
+  .photo-card img {
+    transition: transform 0.4s ease, filter 0.3s ease;
+  }
+  .photo-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
   </style>
 </head>
 <body>
@@ -128,99 +136,160 @@
 </section>
 
   <!-- 3D Section -->
-  <section id="3d">
-    <div class="container">
-      <h2 class="text-center mb-4">3D Designs</h2>
-      <div class="d-flex justify-content-center">
+<section id="3d" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">3D Designs</h2>
+    <div class="row g-4">
       
-        <model-viewer src="assets/3d/model1.glb" alt="3D Model"
-          auto-rotate camera-controls ar
-          style="width:100%; max-width:600px; height:400px; background:#f8f9fa; border-radius:8px;">
-        </model-viewer>
+      <!-- 3D Model 1 -->
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded-3">
+          <model-viewer src="assets/3d/model1.glb" alt="3D Model 1"
+            auto-rotate camera-controls ar
+            style="width:100%; height:300px; background:white; border-radius:8px;">
+          </model-viewer>
+        </div>
       </div>
+
+      <!-- 3D Model 2
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded-3">
+          <model-viewer src="assets/3d/model2.glb" alt="3D Model 2"
+            auto-rotate camera-controls ar
+            style="width:100%; height:300px; background:white; border-radius:8px;">
+          </model-viewer>
+        </div>
+      </div>-->
+
+      <!-- 3D Model 3 
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded-3">
+          <model-viewer src="assets/3d/model3.glb" alt="3D Model 3"
+            auto-rotate camera-controls ar
+            style="width:100%; height:300px; background:white; border-radius:8px;">
+          </model-viewer>
+        </div>
+      </div>-->
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Photos -->
-  <section id="photos" class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Photos</h2>
-      <div class="row g-3">
-        <div class="col-md-4"><img src="assets/photos/photo1.png" class="img-fluid rounded shadow" alt="Photo 1"></div>
-        <div class="col-md-4"><img src="assets/photos/photo2.jpg" class="img-fluid rounded shadow" alt="Photo 2"></div>
-        <div class="col-md-4"><img src="assets/photos/photo3.png" class="img-fluid rounded shadow" alt="Photo 3"></div>
-        <div class="col-md-4"><img src="assets/photos/photo4.jpg" class="img-fluid rounded shadow" alt="Photo 4"></div>
-        <div class="col-md-4"><img src="assets/photos/photo5.jpg" class="img-fluid rounded shadow" alt="Photo 5"></div>
-        <div class="col-md-4"><img src="assets/photos/photo6.png" class="img-fluid rounded shadow" alt="Photo 6"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Websites -->
-  <section id="websites">
-    <div class="container">
-  <h2 class="text-center mb-4">Websites</h2>
-  <div class="row g-3">
-    <div class="col-md-6">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <p class="card-text">Entrepreneurs static Advertisement + redirection site</p>
-          
-          <!-- Project image gallery -->
-          <div class="row g-2">
-            <div class="col-4">
-              <img src="assets/websites/site0.png" alt="website preview 1" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="assets/websites/site1.png" alt="website preview 2" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="assets/websites/site2.png" alt="website preview 3" class="img-fluid rounded">
-            </div>
-          </div>
-
-          <!-- Button -->
-          <div class="mt-3">
-            <a href="https://bountyga.github.io/Joy_Adsite/" 
-               class="btn btn-primary w-100" target="_blank">
-               View Site
-            </a>
-          </div>
+ <!-- Photos Section -->
+<section id="photos" class="py-5" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="color:#0dcaf0;">Photos</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo1.png" class="img-fluid" alt="Photo 1">
         </div>
       </div>
-    </div>
-     <div class="col-md-6">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <p class="card-text">A Design for the Nigerian Red Cross</p>
-          
-          <!-- Project image gallery -->
-          <div class="row g-2">
-            <div class="col-4">
-              <img src="assets/websites/site3.png" alt="website preview 1" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="assets/websites/site4.png" alt="website preview 2" class="img-fluid rounded">
-            </div>
-            <div class="col-4">
-              <img src="assets/websites/site5.png" alt="website preview 3" class="img-fluid rounded">
-            </div>
-          </div>
 
-          <!-- Button -->
-          <div class="mt-3">
-            <a href="https://bountyga.github.io/Model/" 
-               class="btn btn-primary w-100" target="_blank">
-               View Site
-            </a>
-          </div>
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo2.jpg" class="img-fluid" alt="Photo 2">
         </div>
       </div>
-     </div>
+
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo3.png" class="img-fluid" alt="Photo 3">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo4.jpg" class="img-fluid" alt="Photo 4">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo5.jpg" class="img-fluid" alt="Photo 5">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="photo-card shadow-sm rounded overflow-hidden">
+          <img src="assets/photos/photo6.png" class="img-fluid" alt="Photo 6">
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+</section>
 
-  </section>
+<!-- Websites Section -->
+<section id="websites" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Websites</h2>
+    <div class="row g-4">
+
+      <!-- Website Project 1 -->
+      <div class="col-md-6">
+        <div class="card shadow-lg h-100 border-0">
+          <div class="card-body">
+            <h5 class="card-title mb-3 text-primary">Entrepreneurs Static Advertisement Site</h5>
+            <p class="card-text">A simple ad + redirection static website for entrepreneurs.</p>
+
+            <!-- Image gallery -->
+            <div class="row g-2 mb-3">
+              <div class="col-4">
+                <img src="assets/websites/site0.png" class="img-fluid rounded shadow-sm" alt="Website preview 1">
+              </div>
+              <div class="col-4">
+                <img src="assets/websites/site1.png" class="img-fluid rounded shadow-sm" alt="Website preview 2">
+              </div>
+              <div class="col-4">
+                <img src="assets/websites/site2.png" class="img-fluid rounded shadow-sm" alt="Website preview 3">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <a href="https://bountyga.github.io/Joy_Adsite/" target="_blank" 
+               class="btn btn-primary w-100 rounded-pill shadow">
+              🌐 View Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Website Project 2 -->
+      <div class="col-md-6">
+        <div class="card shadow-lg h-100 border-0">
+          <div class="card-body">
+            <h5 class="card-title mb-3 text-primary">Nigerian Red Cross Design</h5>
+            <p class="card-text">A proposed design layout site for the Nigerian Red Cross.</p>
+
+            <!-- Image gallery -->
+            <div class="row g-2 mb-3">
+              <div class="col-4">
+                <img src="assets/websites/site3.png" class="img-fluid rounded shadow-sm" alt="Website preview 1">
+              </div>
+              <div class="col-4">
+                <img src="assets/websites/site4.png" class="img-fluid rounded shadow-sm" alt="Website preview 2">
+              </div>
+              <div class="col-4">
+                <img src="assets/websites/site5.png" class="img-fluid rounded shadow-sm" alt="Website preview 3">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <a href="https://bountyga.github.io/Model/" target="_blank" 
+               class="btn btn-primary w-100 rounded-pill shadow">
+              🌐 View Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Videos -->
   <section id="videos" class="bg-light">
