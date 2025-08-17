@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-gray-900/80 backdrop-blur z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-xl font-bold">My Portfolio</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#3d" class="hover:text-cyan-400">3D</a></li>
+        <li><a href="#photos" class="hover:text-cyan-400">Photos</a></li>
+        <li><a href="#websites" class="hover:text-cyan-400">Websites</a></li>
+        <li><a href="#videos" class="hover:text-cyan-400">Videos</a></li>
+        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex flex-col justify-center items-center text-center relative bg-gradient-to-r from-purple-900 via-gray-900 to-black">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-4">Hey, I'm <span class="text-cyan-400">[Your Name]</span></h2>
+    <p class="text-xl md:text-2xl text-gray-300 mb-6">3D Designer • Photographer • Web Developer</p>
+    <a href="#contact" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl text-lg font-bold transition">Hire Me</a>
+  </section>
+
+  <!-- 3D Designs -->
+  <section id="3d" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">3D Designs</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <model-viewer src="assets/model1.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
+        <model-viewer src="assets/model2.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
+        <model-viewer src="assets/model3.glb" alt="3D model" auto-rotate camera-controls class="w-full h-80 bg-gray-700 rounded-xl shadow-lg"></model-viewer>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section id="photos" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Photography</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="assets/photo1.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="assets/photo2.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
+        <img src="assets/photo3.jpg" alt="photo" class="rounded-xl shadow-lg hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Websites -->
+  <section id="websites" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Websites</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
+          <img src="assets/site1.png" alt="website" class="rounded-md mb-4">
+          <a href="https://yoursite1.com" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
+          <img src="assets/site2.png" alt="website" class="rounded-md mb-4">
+          <a href="https://yoursite2.com" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-xl shadow-lg">
+          <img src="assets/site3.png" alt="website" class="rounded-md mb-4">
+          <a href="https://yoursite3.com" target="_blank" class="text-cyan-400 hover:underline">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section id="videos" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Videos</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Local video -->
+        <video controls class="w-full rounded-xl shadow-lg">
+          <source src="assets/video1.mp4" type="video/mp4">
+        </video>
+        <!-- YouTube embed -->
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-full rounded-xl shadow-lg"
+            src="https://www.youtube.com/embed/YOURVIDEOID"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gray-800 text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg max-w-2xl mx-auto text-gray-300">
+        I'm a multidisciplinary creator passionate about 3D design, photography, and web development.
+        I love combining creativity with technology to bring ideas to life.
+      </p>
+      <div class="flex justify-center mt-8 space-x-4">
+        <span class="px-4 py-2 bg-gray-700 rounded-full">Blender</span>
+        <span class="px-4 py-2 bg-gray-700 rounded-full">Photoshop</span>
+        <span class="px-4 py-2 bg-gray-700 rounded-full">React</span>
+        <span class="px-4 py-2 bg-gray-700 rounded-full">Tailwind</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <p class="mb-6 text-gray-300">Let's work together! Reach me via email or socials below:</p>
+      <a href="mailto:youremail@example.com" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-xl text-lg font-bold transition">Send Email</a>
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="#" class="hover:text-cyan-400">GitHub</a>
+        <a href="#" class="hover:text-cyan-400">LinkedIn</a>
+        <a href="#" class="hover:text-cyan-400">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-center text-gray-400">
+    © 2025 [Your Name]. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
