@@ -291,43 +291,122 @@
   </div>
 </section>
 
-  <!-- Videos -->
-  <section id="videos" class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Videos</h2>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <video controls class="w-100 rounded shadow">
+<!-- Videos -->
+<section id="videos" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Videos</h2>
+    <div class="row g-4">
+      
+      <!-- Local video -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <video controls class="w-100 h-100 rounded">
             <source src="assets/videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
         </div>
-       <div class="col-md-6"> <iframe src="https://www.youtube.com/embed/YOdnhyyRR-E" allowfullscreen></iframe>
-       </div> 
-        <div class="col-md-6"> <iframe src="https://www.youtube.com/embed/0e-aAxgLDbI" allowfullscreen></iframe> 
-       </div>
       </div>
+      
+      <!-- YouTube 1 -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe src="https://www.youtube.com/embed/YOdnhyyRR-E" 
+                  title="YouTube video" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- YouTube 2 -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe src="https://www.youtube.com/embed/0e-aAxgLDbI" 
+                  title="YouTube video" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- About -->
-  <section id="about">
-    <div class="container">
-      <h2 class="text-center mb-4">About Me</h2>
-      <p class="text-center">I’m a Mechatronics Engineer passionate about 3D design, web development, and creative projects. This portfolio showcases some of my best work.</p>
+<section id="about" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <div class="row align-items-center g-4">
+      
+      <!-- Profile Image -->
+      <div class="col-md-4 text-center">
+        <img src="assets/images/profile.jpg" alt="Profile photo" class="img-fluid rounded-circle shadow" style="max-width: 220px;">
+      </div>
+      
+      <!-- Bio -->
+      <div class="col-md-8">
+        <p class="lead">
+          I’m a <strong>Mechatronics Engineer</strong> passionate about <strong>3D design</strong>, 
+          <strong>web development</strong>, and bringing creative ideas to life through technology. 
+          This portfolio showcases some of my best work across engineering, software, and design.
+        </p>
+        <p>
+          With hands-on experience in <em>CAD modeling, CNC machining, electronics, and web technologies</em>, 
+          I enjoy building solutions that merge hardware and software seamlessly. 
+        </p>
+        <a href="#projects" class="btn btn-primary rounded-pill px-4 mt-2">See My Work</a>
+      </div>
+      
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-light">
-    <div class="container"> <h2 class="mb-4 display-6 fw-bold">About Me</h2> <p class="lead text-gray-300"> I'm a multidisciplinary creator and inventor passionate about many things, wondering to make the world a better place. This passion drives me to build skills across different disciplines from Engineering, Technology, Management, to Fitness. </p> <p> I love combining creativity with technology to bring ideas to life. </p> <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap"> <span class="badge bg-secondary">Onshape</span> <span class="badge bg-secondary">Sketchup</span> <span class="badge bg-secondary">Engineering</span> <span class="badge bg-secondary">Web Dev</span> </div> </div>
-  </section>
+
+ <!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 display-6 fw-bold">Get In Touch</h2>
+    <p class="lead text-muted">
+      I’m a multidisciplinary creator and inventor passionate about making the world a better place.  
+      My journey spans <strong>Engineering, Technology, Management, and Fitness</strong>,  
+      driven by the belief that creativity and innovation can solve real problems.
+    </p>
+    <p>
+      I love combining <em>creativity with technology</em> to bring ideas to life.  
+      If you'd like to collaborate, feel free to reach out!
+    </p>
+
+    <!-- Skills/Badges -->
+    <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
+      <span class="badge bg-primary">Onshape</span>
+      <span class="badge bg-success">SketchUp</span>
+      <span class="badge bg-dark">Engineering</span>
+      <span class="badge bg-info text-dark">Web Dev</span>
+    </div>
+
+    <!-- Contact Button -->
+    <div class="mt-4">
+      <a href="mailto:gabrielbounty19@gmail.com" class="btn btn-primary px-4 rounded-pill">
+        <i class="bi bi-envelope-fill me-2"></i> Email Me
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center">
-    <div class="container">
-      <small>&copy; 2025 Bounty G.A. All Rights Reserved.</small>
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <div class="mb-3">
+      <!-- Social icons (optional) -->
+      <a href="https://github.com/BountyGA" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/bounty-gabriel-adetula-00a833181/" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://www.youtube.com/channel/UClG3us9xQozLRXhJwRts46w" class="text-white mx-2"><i class="fab fa-youtube fa-lg"></i></a>
     </div>
-  </footer>
+    <small class="d-block">&copy; 2025 <strong>Bounty G.A.</strong> All Rights Reserved.</small>
+    <small class="d-block mt-1">Built using HTML, CSS & Bootstrap, deployed by github pages</small>
+  </div>
+</footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
